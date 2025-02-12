@@ -13,10 +13,22 @@ XXXX is a cross-layer dataset, which includes the application layer network trac
 The dataset includes 4 catagories in total:
 - Indoor_AllCombos
   - Include all the possible comniations of parameters as shown in the figure below. The data collection period for each test is around 30 seconds.
+
+  ![Indoor_AllCombos](./figures/allcombos.png)
 - Outdoor_ParkingLot
-  - This is a preliminary simple outdoor test. There are two UEs in the parkinglot, one serves as a transmitter, the other one is serves as a receiver. The route is shown as below. This test lacks the GNSS coordinations.
-- Indoor_Presentative
-  - We pick certain presentative cases and extend the data collection period to 1 hour.
+  - This is a preliminary simple outdoor test. There are two UEs in the parkinglot, one serves as a transmitter, the other one is serves as a receiver. This test lacks the GNSS coordinations.
+
+- Indoor_Selective
+  - We pick certain presentative cases and extend the data collection period to 1 hour. The data is collected in a typical indoor environment. The selective cases are shown in the figure below.
+
+| Cases      | Description                                                                                                                                        |
+|------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Scenarios  | The configuration is the same as the outdoor scenarios                                                                                             |
+| Throughput | 4 TX are transmitting in priority 0, reservation 20 ms and the packet length if from 100-8000 bytes.                                               |
+| IPG        | 4 TX are transmitting in priority 0, resevation 20ms, packet length 4000 bytes and  the packet generation interval is set from 10, 20, 50, 100 ms. |
+| Priority   | 4 TX are transmitting in reservation 20 ms, packet length 4000 byts, packet generation interval is set to 20 ms and the priority is set from 0-7.  |
+
+
 - Outdoor_Intersection
   - We picko 10 presentative cases and collect data in a busy intersection. This test has GNSS coordinations gotten from a high-end IMU, xsens.
 
@@ -34,10 +46,29 @@ This is the end-to-end, receiver side application layer trace. The log is genera
 - latency (ms): Latency = rx_timestamp - tx_timestamp
 - per_ue_loss_pct (%): The packet loss rate for different UEs.
 - ipg (ms): The inner packet gap (jitter).
-- tx_family_id: ?
 - tx_equipment_id: The identity of the transmitter.
 - tx_seq_num: The sequence number of the transmitter.
-- tx_priority:
+- tx_priority: The transmitted packet priority.
+
+### mac.csv
+This is the C-V2X MAC layer trace captured by the USRP B210. 
+MAC layer handles the radio resource management, scheduling, and the data link layer functions.
+In C-V2X, there are additional source layer-2 IDs and destination layer-2 IDs in the MAC layer header to identify the transmitter and receiver.
+
+### sci.csv
+This is the sidelink control information captured by the USRP B210. SCI is an important information used in C-V2X to schedule the sidelink resources automatically between the UEs. The data in SCI.csv includes - timestamp: The timestamp in us when the USRP captures the SCI packet over the air.
+- priority:
+- resource_resv:
+- freq_resourece:
+- time_gap:
+- mcs_idx:
+- pscch_start:
+- nof_prb:
+- N_x_id:
+For more details about the data mean in SCI, please refer to the 3GPP TS...
+
+### GNSS
+The GNSS data is collected by a high-end IMU, xsens. The data includes the latitude, longitude, altitude, and the timestamp. 
 
 ## Example usage
 In the XX folder, we provide some basic utils to commute the average throughput, packet loss rate, etc. and some visualies tool.
@@ -45,4 +76,8 @@ For example, to visulize the channel utilization,
 Run ```my script````. The example output is shown below.
 The window is interacive, you can drag or zoom in/out. 
 
-Hope this be helpful.
+## Citation
+If you use this dataset, please cite our paper.
+```
+TBD
+```
