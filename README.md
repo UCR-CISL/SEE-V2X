@@ -2,7 +2,7 @@
 
 This is the official repository of SenSys'25 paper. "SEE-V2X: A Cross-Layer Dataset for Sidelink V2X Communication".
 
-Project website:[SEE-V2X Website](https://cisl.ucr.edu/SEE-V2X-Dataset/) 
+Project website:[SEE-V2X Website](https://cisl.ucr.edu/SEE-V2X/) 
 
 Supoorted by CISL@UCR and GeNeLa@UCR.
 
