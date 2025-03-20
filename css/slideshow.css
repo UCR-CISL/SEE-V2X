@@ -10,6 +10,7 @@
 /* Hide the images by default */
 .mySlides {
   display: none;
+  width: 60%;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -22,10 +23,10 @@
 .next {
   cursor: pointer;
   position: absolute;
-  top: 40%;
+  top: 50%;
   width: auto;
   padding: 16px;
-  margin-top: -50px;
+  margin-top: 100px;
   color: black;
   font-weight: bold;
   font-size: 20px;
