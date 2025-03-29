@@ -2,9 +2,9 @@
 
 This is the official repository of SenSys'25 paper. "SEE-V2X: A Cross-Layer Dataset for Sidelink V2X Communication".
 
-Project website:[SEE-V2X Website](https://cisl.ucr.edu/SEE-V2X/) 
+Project website: [SEE-V2X Website](https://cisl.ucr.edu/SEE-V2X/) 
 
-Supoorted by CISL@UCR and GeNeLa@UCR.
+Supported by [CISL@UCR](https://cisl.ucr.edu/) and [GeNeLa@UCR](https://cs.ucr.edu/~ztan/group.html).
 
 ## Get Access to the Dataset
 Please check here: [Dataset](https://drive.google.com/drive/folders/1gAFsjYsjOiEH-U50wPoFzfS9-YYh_UwL?usp=sharing) to get access to the dataset.
@@ -125,5 +125,11 @@ All scripts are tested on Ubuntu 22.04:
 ## Citation
 If you use this dataset, please cite our paper.
 ```
-TBD
+@inproceedings{see-v2x,
+  title={SEE-V2X: C-V2X Direct Communication Dataset: An Application-Centric Approach},
+  author={Ruoshen Mo and Bo Wu and Zhaowei Tan and Hang Qiu},
+  booktitle={Proceedings of the 23rd ACM Conference on Embedded Networked Sensor Systems},
+  series={SenSys '25},
+  year={2025}
+}
 ```
