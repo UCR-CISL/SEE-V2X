@@ -1,3 +1,10 @@
+# Update
+`pssch_ue.c` is the script used in our paper to receive and decode SCI/MAC information.
+
+Please replace the `pssch_ue.c` file in the following repository with this version:
+
+https://github.com/FabianEckermann/cv2x-traffic-generator
+
 # SEE-V2X Dataset
 
 This is the official repository of SenSys'25 paper. "SEE-V2X: A Cross-Layer Dataset for Sidelink V2X Communication".
